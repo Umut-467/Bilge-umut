@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Bilge ❤️ Umut</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.kutu {
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+#kalp {
+  font-size:70px;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="kutu">
+  <h1>Bilge Erkan 💖</h1>
+  <p id="mesaj">Kalbime dokun 💕</p>
+  <div id="kalp" onclick="tikla()">❤️</div>
+  <p>Sevgi Sayacı: <span id="sayac">0</span></p>
+</div>
+
+<script>
+let s = 0;
+const mesajlar = [
+  "Seni çok seviyorum 💗",
+  "Gülüşün dünyam 🌸",
+  "Kalbim seninle 💕",
+  "İyi ki varsın 🥰",
+  "Umut seni düşünüyor 💭"
+];
+
+function tikla(){
+  s++;
+  document.getElementById("sayac").innerText = s;
+  document.getElementById("mesaj").innerText =
+    mesajlar[Math.floor(Math.random()*mesajlar.length)];
+}
+</script>
+
+</body>
+</html>
